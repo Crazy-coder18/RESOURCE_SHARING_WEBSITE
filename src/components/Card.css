@@ -1,0 +1,55 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+  }
+  
+  .card {
+    
+    border: 2px solid orange;
+    width: 450px; /* Increased width of the card */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Slightly more rounded corners */
+    overflow: hidden;
+    margin: 15px; /* Added more margin to separate cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better appearance */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+  }
+  
+  .card-img-custom {
+    width: 100%;
+    height: 200px; /* Reduced height */
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 20px; /* Increased padding for more space inside the card */
+  }
+  
+  .card-title {
+    font-size: 1.25rem; /* Slightly larger font size for the title */
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555; /* Softer color for the text */
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
