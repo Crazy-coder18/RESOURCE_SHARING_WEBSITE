@@ -5,26 +5,8 @@ const Aboutus = () => {
   return (
     <div style={styles.container}>
       <div className="headi">
-        <h2 style={styles.heading}>ABOUT OUR TECHNICAL TEAM</h2>
-        <div className="image-container" style={styles.imageContainer}>
-          
-          <div>
-            <img src="https://wallpapers.com/images/hd/cartoon-kohli-cricket-4k-3ae01vjqfye2xnn8.jpg" alt="" style={styles.image} />
-            <h6 style={{textAlign:"center"}}><b>B VARSHITH REDDY</b></h6>
-          </div>
-          <div>
-            <img src="https://wallpapers.com/images/hd/cartoon-kohli-cricket-4k-3ae01vjqfye2xnn8.jpg" alt="" style={styles.image} />
-            <h6 style={{textAlign:"center"}}><b>LIKITH</b></h6>
-          </div>
-          <div id="hima">
-            <img src="https://wallpapers.com/images/hd/cartoon-kohli-cricket-4k-3ae01vjqfye2xnn8.jpg" alt="" style={styles.image} />
-            <h6 style={{textAlign:"center"}}><b>HIMA PRANEETHA</b></h6>
-          </div>
-          <div id="harika">
-            <img src="https://wallpapers.com/images/hd/cartoon-kohli-cricket-4k-3ae01vjqfye2xnn8.jpg" alt="" style={styles.image} />
-            <h6 style={{textAlign:"center"}}><b>HARIKA BIJJU</b></h6>
-          </div>
-          
+        <h2 style={styles.heading}>ABOUT THE DEVELOPER</h2>
+        <div className="image-container" style={styles.imageContainer}>  
           <div>
             <img src="https://wallpapers.com/images/hd/cartoon-kohli-cricket-4k-3ae01vjqfye2xnn8.jpg" alt="" style={styles.image} />
             <h6 style={{textAlign:"center"}}><b>AKSHAY KIREET</b></h6>
