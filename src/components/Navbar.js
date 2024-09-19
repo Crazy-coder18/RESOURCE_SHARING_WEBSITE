@@ -38,7 +38,10 @@ export default function Navbar() {
               <li class="nav-item">
                 <Link class="nav-link" to="/aboutus"  style={{"color": "black"}}>ABOUT US</Link>
               </li>
-            
+              
+              <li class="nav-item">
+                <Link class="nav-link" to="/myitems"  style={{"color": "black"}}>My Items</Link>
+              </li>
           </ul>
           
         </div>

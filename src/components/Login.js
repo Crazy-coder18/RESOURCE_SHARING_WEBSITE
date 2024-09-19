@@ -6,7 +6,7 @@ import './Login.css';
 import ItemContext from '../ItemContext/Itemcontext';
 
 export default function Login(props) {
-    // const { state, update } = useContext(ItemContext);
+    
     
     
     
@@ -51,7 +51,7 @@ export default function Login(props) {
             <div>
                 <div className="d-flex">
                     <div className="message">
-                        <h2>Hello, this is a Resource Sharing Website  </h2>
+                        <h2>Hello, this is a Resource Sharing Website </h2>
                         <div className="message-typewriter">
                             {currentMessage}
                         </div>

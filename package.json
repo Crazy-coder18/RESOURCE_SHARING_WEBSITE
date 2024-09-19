@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.3",
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
     "create-react-app": "^5.0.1",
     "express": "^4.19.2",
     "express-validator": "^7.2.0",
@@ -23,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "both": "concurrently \"npm run start\" \"node backend/index.js\""
   },
   "eslintConfig": {
     "extends": [

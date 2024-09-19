@@ -13,6 +13,9 @@ import Aboutus from './components/Aboutus';
 import LoginNav from './components/LoginNav';
 import Login from './components/Login'
 import Signup from './components/Signup';
+import ItemState from '../src/ItemContext/ItemState';
+import Myitems from './components/Myitems';
+
 const App = () => {
   const [home, sethome] = useState([
     {
@@ -245,6 +248,8 @@ const App = () => {
     ])
 
   return (
+    <>
+    <ItemState>
     <Router>
       <Routes>
         <Route path='/' element={<Login/>}></Route>
@@ -266,8 +271,12 @@ const App = () => {
         <Route path='/home' element={<Home arr={home} />} />
         <Route path='/cardinfo' element={<Cardinfo />} />
         <Route path='/aboutus' element={<Aboutus/>}/>
+        
+        <Route path='/myitems' element={<Myitems education={education}/>}/>
       </Routes>
     </Router>
+    </ItemState>
+    </>
   );
 };
 

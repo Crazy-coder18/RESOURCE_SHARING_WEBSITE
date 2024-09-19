@@ -2,22 +2,21 @@ import React, { useState } from 'react';
 import ItemContext from './Itemcontext';
 
 export default function ItemState(props) {
-    const s1 = {
-        name: "hello",
-        age: "this"
-    };
-
-    const [state, setState] = useState(s1);
-
-    const update = () => {
-        setState({
-            name: "ash",
-            age: "hello"
-        });
-    };
-
+    const allitems=[];
+    const host="https://localhost:5000"
+    const [items, setitems] = useState(allitems);
+    const getitems=async ()=>{
+        const response=await fetch(`http://localhost:5000/api/item/fetchitems`,{
+            method:"GET",
+            headers:{
+                'Content-type':"application/json",
+            }
+        })
+        const json=await response.json();
+        setitems(json);
+    }
     return (
-        <ItemContext.Provider value={{ state, update }}>
+        <ItemContext.Provider value={{ items,getitems}}>
             {props.children}
         </ItemContext.Provider>
     );
