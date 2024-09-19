@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Card from './Card';
+import Navbar from './Navbar';
 
 export default function Clothing(props) {
   return (
+    <>
+    <Navbar/>
     <div className="container my-3">
       <h1 style={{textAlign:"center"}}>WELCOME TO CLOTHING PAGE</h1>
       <div style={{ display: 'grid', gridTemplateColumns: "1fr 1fr 1fr ", gap: '20px' }}>
@@ -22,5 +25,6 @@ export default function Clothing(props) {
         ))}
       </div>
     </div>
+    </>
   );
 }

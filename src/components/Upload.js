@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './Navbar';
 
 const UploadForm = (props) => {
     const [formValues, setFormValues] = useState({
@@ -116,6 +117,8 @@ const UploadForm = (props) => {
     };
 
     return (
+        <>
+        <Navbar/>
         <div className="container d-flex justify-content-center align-items-center vh-100">
             <div className="upload-form w-75" style={{ border: '3px solid skyblue', maxHeight: '80vh', overflowY: 'auto' }}>
                 <h4 className="text-center mb-4">ENTER DETAILS FOR UPLOAD</h4>
@@ -237,6 +240,7 @@ const UploadForm = (props) => {
                 </form>
             </div>
         </div>
+        </>
     );
 };
 

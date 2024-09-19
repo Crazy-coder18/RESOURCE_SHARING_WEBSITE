@@ -1,0 +1,41 @@
+body{
+    background-color: white;
+    color: black;
+}
+.message {
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+    position: relative;
+    margin-left: 20px;
+    font-size: 2rem; 
+  }
+  
+  .message h2 {
+    margin-bottom: 20px;
+    font-size: 2rem; 
+    margin-top: 200px;
+    color: blueviolet;
+  }
+  
+  .message-typewriter {
+    font-family: monospace;
+    font-size: 2rem; 
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%; 
+    border-right: 2px solid black; /* Cursor */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+    color: rgb(9, 190, 63);
+  }
+
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+  

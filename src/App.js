@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import UploadForm from './components/Upload';
@@ -10,7 +10,9 @@ import Food from './components/Food';
 import Education from './components/Education';
 import Cardinfo from './components/Cardinfo';
 import Aboutus from './components/Aboutus';
-
+import LoginNav from './components/LoginNav';
+import Login from './components/Login'
+import Signup from './components/Signup';
 const App = () => {
   const [home, sethome] = useState([
     {
@@ -244,8 +246,9 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar />
       <Routes>
+        <Route path='/' element={<Login/>}></Route>
+        <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/upload' element={<UploadForm  
             setelectronics={setelectronics}
             electronics={electronics}
@@ -260,7 +263,7 @@ const App = () => {
         <Route path='/sports' element={<Sports sports={sports}  />} />
         <Route path='/others' element={<Food others={others} />} />
         <Route path='/education' element={<Education education={education}  />} />
-        <Route path='/' element={<Home arr={home} />} />
+        <Route path='/home' element={<Home arr={home} />} />
         <Route path='/cardinfo' element={<Cardinfo />} />
         <Route path='/aboutus' element={<Aboutus/>}/>
       </Routes>

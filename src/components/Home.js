@@ -1,8 +1,11 @@
 import React from 'react';
 import Card from './Card';
+import Navbar from './Navbar';
 
 const Home = ({arr}) => {
   return (
+    <>
+    <Navbar/>
     <div className="container my-3 ">
       <h1 style={{textAlign:"center"}}>WELCOME TO HOME PAGE</h1>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px' }}>
@@ -22,6 +25,7 @@ const Home = ({arr}) => {
         ))}
       </div>
       </div>
+      </>
   );
 };
 

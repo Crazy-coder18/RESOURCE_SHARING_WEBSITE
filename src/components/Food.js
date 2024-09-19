@@ -1,9 +1,12 @@
 import React from 'react'
 import Card from './Card'
 import { useState } from 'react'
+import Navbar from './Navbar'
 export default function Food(props) {
 
   return (
+    <>
+    <Navbar/>
     <div className="container my-3 ">
       <h1 style={{textAlign:"center"}}>WELCOME TO OTHERS</h1>
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px' }}>
@@ -23,5 +26,6 @@ export default function Food(props) {
       ))}
     </div>
     </div>
+    </>
   )
 }

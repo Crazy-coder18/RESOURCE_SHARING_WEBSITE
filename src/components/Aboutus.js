@@ -1,8 +1,11 @@
 import React from 'react';
+import Navbar from './Navbar';
 
 
 const Aboutus = () => {
   return (
+    <>
+    <Navbar/>
     <div style={styles.container}>
       <div className="headi">
         <h2 style={styles.heading}>ABOUT THE DEVELOPER</h2>
@@ -35,6 +38,7 @@ const Aboutus = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

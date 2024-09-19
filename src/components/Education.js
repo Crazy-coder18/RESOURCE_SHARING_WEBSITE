@@ -1,10 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
 import Card from './Card'
+import Navbar from './Navbar'
 
 export default function Education(props) {
 
   return (
+    <>
+    <Navbar/>
     <div className="container my-3 ">
       <h1 style={{textAlign:"center"}}>WELCOME TO EDUCATION</h1>
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px' }}>
@@ -24,5 +27,6 @@ export default function Education(props) {
       ))}
     </div>
     </div>
+    </>
   )
 }
