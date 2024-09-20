@@ -263,7 +263,7 @@ const App = () => {
             education={education} seteducation={seteducation}
             arr={home} sethome={sethome}
         />} />
-        <Route path='/electronics' element={<Electronics electronics={electronics}  />} />
+        <Route path='/electronics' element={<Electronics electronics={electronics} />} />
         <Route path='/clothing' element={<Clothing  cloth={cloth}  />} />
         <Route path='/sports' element={<Sports sports={sports}  />} />
         <Route path='/others' element={<Food others={others} />} />
