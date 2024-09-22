@@ -3,11 +3,34 @@ import React, { useState, useEffect, useContext } from 'react';
 import Navbar from './Navbar';
 import LoginNav from './LoginNav';
 import './Login.css';
-import ItemContext from '../ItemContext/Itemcontext';
-
+import { useNavigate } from 'react-router-dom';
 export default function Login(props) {
-    
-    
+    const [user, setUser] = useState({ password: "", email: "" });
+    let navigate=useNavigate();
+    const onchange = (e) => {
+        setUser({ ...user, [e.target.name]: e.target.value });
+     };
+    const handleclick=async(e)=>{
+        e.preventDefault();
+    try {
+      const response = await fetch(`http://localhost:5000/api/auth/login`, {
+          method: "POST",
+          headers: {
+              'Content-type': "application/json",
+           },
+           body:JSON.stringify({email:user.email,password:user.password,})
+      });
+      const json = await response.json();
+      if(json.success){
+        localStorage.setItem("token",json.authtoken);
+        navigate("/home")
+      }
+      setUser(json);
+      setUser({ password: "", email: "" })
+  } catch (error) {
+      console.error('Error fetching user items:', error);
+  }
+    }
     
     
     const messages = [
@@ -83,6 +106,9 @@ export default function Login(props) {
                                     aria-describedby="emailHelp"
                                     placeholder="Enter email"
                                     style={{ width: '90%' }}
+                                    name="email"
+                                    value={user.email}
+                                    onChange={onchange}
                                 />
                                 <small id="emailHelp" className="form-text text-muted">
                                     We'll never share your email with anyone else.
@@ -98,12 +124,16 @@ export default function Login(props) {
                                     id="exampleInputPassword1"
                                     placeholder="Password"
                                     style={{ width: '90%' }}
+                                    name="password"
+                                    value={user.password}
+                                    onChange={onchange}
                                 />
                             </div>
                             <button
                                 type="submit"
                                 className="btn btn-primary"
                                 style={{ marginTop: '40px', marginLeft: '100px', width: '50%' }}
+                                onClick={handleclick}
                             >
                                 Submit
                             </button>

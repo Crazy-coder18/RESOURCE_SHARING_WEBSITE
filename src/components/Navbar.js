@@ -13,7 +13,7 @@ export default function Navbar() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <Link class="nav-link" to="/" style={{"color": "black"}}>Home</Link>
+              <Link class="nav-link" to="/home" style={{"color": "black"}}>Home</Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link" to="/electronics"  style={{"color": "black"}}>ELECTRONICS</Link>
@@ -29,6 +29,9 @@ export default function Navbar() {
               </li>
               
               <li class="nav-item">
+                <Link class="nav-link" to="/myitems"  style={{"color": "black"}}>My Items</Link>
+              </li>
+              <li class="nav-item">
                 <Link class="nav-link" to="/others"   style={{"color": "black"}} > OTHERS</Link>
               </li>
               <li class="nav-item">
@@ -38,10 +41,7 @@ export default function Navbar() {
               <li class="nav-item">
                 <Link class="nav-link" to="/aboutus"  style={{"color": "black"}}>ABOUT US</Link>
               </li>
-              
-              <li class="nav-item">
-                <Link class="nav-link" to="/myitems"  style={{"color": "black"}}>My Items</Link>
-              </li>
+              <button class="btn btn-danger my-2 my-sm-0" style={{position:"absolute",right:"0px"}} type="button">Logout</button>
           </ul>
           
         </div>

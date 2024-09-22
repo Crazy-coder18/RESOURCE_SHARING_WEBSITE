@@ -26,11 +26,11 @@ export default function Myitemcard(props) {
   
   const handleclick=()=>{
     deluseritems(cardData.id);
-    return null;
   }
 
   return (
     <div className="card-container">
+     
       <div className="card">
         <img 
           className="card-img-top card-img-custom" 
@@ -47,7 +47,7 @@ export default function Myitemcard(props) {
           >
             INFO
           </Link>
-          <button className='btn btn-danger' onClick={handleclick()}>DELETE</button>
+          <button className='btn btn-danger' onClick={handleclick}>DELETE</button>
         </div>
       </div>
     </div>
